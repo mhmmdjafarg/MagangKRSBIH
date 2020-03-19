@@ -152,7 +152,7 @@ void Car::move(){
     P.setX(prevX+speed*cos(ToRadian(P.getOrientation())));
     P.setY(prevY+speed*sin(ToRadian(P.getOrientation())));
 
-    double newDistance, oldDistance;
+    double newDistance;
     newDistance = distanceTraveled + P.euclideanDistance(prevX,prevY,P.getX(),P.getY());
     fuelControl(newDistance, distanceTraveled);
 
